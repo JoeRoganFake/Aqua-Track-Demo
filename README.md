@@ -1,2 +1,111 @@
-# Aqua-Track-Demo
-Stay hydrated smarter with AquaTrack . Track your daily water intake, use the built-in hydration calculator, and get automatic intake adjustments based on your local climate. Clean design, smart reminders, and personalized goals — all built in just 3 days.
+# AquaTrack
+
+> Track your daily hydration goals — stay healthy, stay hydrated.
+
+---
+
+## Demo
+
+<p align="center">
+  <a href="assets/demo/Aqua_Track_Demo.mp4">
+    <video src="assets/demo/Aqua_Track_Demo.mp4" autoplay loop muted controls width="320" style="border-radius:12px; max-width:100%">
+      <img src="assets/screenshots/my-project-page-1%20(10).jpeg" width="320" alt="Watch Demo" />
+    </video>
+  </a>
+</p>
+
+---
+
+## Screenshots
+
+<p align="center">
+  <img src="assets/screenshots/my-project-page-1%20(10).jpeg" width="18%" alt="Screen 1" />
+  <img src="assets/screenshots/my-project-page-1%20(11).jpeg" width="18%" alt="Screen 2" />
+  <img src="assets/screenshots/my-project-page-1%20(13).jpeg" width="18%" alt="Screen 3" />
+  <img src="assets/screenshots/my-project-page-1%20(14).jpeg" width="18%" alt="Screen 4" />
+  <img src="assets/screenshots/my-project-page-1%20(15).jpeg" width="18%" alt="Screen 5" />
+</p>
+
+---
+
+## Features
+
+- **Daily water intake tracking** — log water with one tap using cup (250 ml), bottle (500 ml), or custom amount
+- **Animated water display** — visual progress wave that fills as you drink throughout the day
+- **Smart daily goal calculator** — personalized recommendation based on weight, age, gender, activity level, pregnancy/breastfeeding, and live climate data
+- **Auto climate adjustment** — fetches local weather via GPS and automatically adjusts your daily goal based on temperature and humidity
+- **Reminders** — scheduled local notifications at a custom interval within a configurable active hours window (e.g. 08:00–22:00), rescheduled automatically at midnight
+- **First-launch language picker** — choose your language before entering the app
+- **Persistent settings** — all preferences survive app restarts
+- **Reset** — reset today's intake at any time from Settings
+- **Customizable themes** — multiple background color themes (Ocean, and more) to personalize the app's visual style
+
+---
+
+## Languages
+
+The app is fully translated into two languages, switchable at any time from Settings:
+
+| Language | Code |
+|----------|------|
+| English  | `en` |
+| Slovenský (Slovak) | `sk` |
+
+All UI strings, notifications, and dynamic messages respond to the selected language. The locale is stored locally and persists across sessions.
+
+---
+
+## Project Structure
+
+```
+lib/
+├── main.dart                        # App entry point, provider setup, routing
+│
+├── l10n/
+│   └── app_strings.dart             # All UI strings (EN + SK) via AppStrings class
+│
+├── providers/
+│   ├── locale_provider.dart         # Locale state, persistence (shared_preferences)
+│   ├── water_provider.dart          # Water intake, daily goal, climate adjustment
+│   ├── climate_provider.dart        # Live weather fetching via GPS + HTTP
+│   └── background_manager.dart      # Visual background theme definitions and state
+│
+├── screens/
+│   ├── language_select_screen.dart  # First-launch language picker
+│   ├── splash_screen.dart           # Animated intro screen
+│   ├── home_screen.dart             # Main tracking screen
+│   ├── settings_screen.dart         # All settings (goal, reminders, language, reset)
+│   └── goal_calculator_screen.dart  # Personalized goal calculator
+│
+├── services/
+│   └── notification_service.dart    # Local notifications + alarm scheduling
+│
+└── widgets/
+    └── water_background.dart        # Animated water wave widget
+```
+
+---
+
+## Tech Stack
+
+| Dependency | Purpose |
+|---|---|
+| `provider` | State management |
+| `shared_preferences` | Persistent local storage |
+| `flutter_local_notifications` | Local push notifications |
+| `android_alarm_manager_plus` | Exact background alarm scheduling (Android) |
+| `geolocator` | GPS location for climate detection |
+| `http` | Weather API requests |
+| `sensors_plus` | Device sensor access |
+| `flutter_timezone` | Timezone resolution for notification scheduling |
+
+---
+
+## Getting Started
+
+```bash
+flutter pub get
+flutter run
+```
+
+> Requires Flutter SDK ^3.7.0
