@@ -7,11 +7,7 @@
 ## Demo
 
 <p align="center">
-  <a href="assets/demo/Aqua_Track_Demo.mp4">
-    <video src="assets/demo/Aqua_Track_Demo.mp4" autoplay loop muted controls width="320" style="border-radius:12px; max-width:100%">
-      <img src="assets/screenshots/my-project-page-1%20(10).jpeg" width="320" alt="Watch Demo" />
-    </video>
-  </a>
+  <img src="assets/demo/Aqua_Track_Demo.gif" width="320" alt="AquaTrack Demo" />
 </p>
 
 ---
@@ -19,11 +15,11 @@
 ## Screenshots
 
 <p align="center">
-  <img src="assets/screenshots/my-project-page-1%20(10).jpeg" width="18%" alt="Screen 1" />
+
   <img src="assets/screenshots/my-project-page-1%20(11).jpeg" width="18%" alt="Screen 2" />
   <img src="assets/screenshots/my-project-page-1%20(13).jpeg" width="18%" alt="Screen 3" />
   <img src="assets/screenshots/my-project-page-1%20(14).jpeg" width="18%" alt="Screen 4" />
-  <img src="assets/screenshots/my-project-page-1%20(15).jpeg" width="18%" alt="Screen 5" />
+
 </p>
 
 ---
@@ -101,11 +97,3 @@ lib/
 
 ---
 
-## Getting Started
-
-```bash
-flutter pub get
-flutter run
-```
-
-> Requires Flutter SDK ^3.7.0
